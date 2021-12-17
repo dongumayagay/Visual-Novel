@@ -1,6 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
-  import { bg, character } from "../statestore";
+  import { bg, character, delay } from "../statestore";
 </script>
 
 <img
@@ -10,7 +10,7 @@
 />
 {#if $character}
   <div
-    transition:fade
-    class="absolute inset-0 w-full h-full bg-black/5 backdrop-blur-sm"
+    transition:fade={{ delay: delay * 2, duration: delay * 1.5 }}
+    class="absolute inset-0 w-full h-full bg-black/10 backdrop-blur-sm"
   />
 {/if}

@@ -30,7 +30,7 @@
     "nextScene": "loob"
   },
   "loob": {
-    "dialog": "Yumi : Sarap sa loob Senpai...\nMas  mahangin dito kesa labas.",
+    "dialog": "Yumi : Sarap sa loob Senpai...\n\nMas  mahangin dito kesa labas.",
     "bg": "pupin.jpg"
   }
 }

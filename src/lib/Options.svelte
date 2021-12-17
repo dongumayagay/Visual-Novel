@@ -11,6 +11,7 @@
     if (scene.dialog) $dialog = scene.dialog;
     if (scene.choices) choices = scene.choices;
   }
+
   $: changeScene($currentScene);
 </script>
 
