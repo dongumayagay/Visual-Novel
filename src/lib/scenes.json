@@ -17,7 +17,20 @@
     ]
   },
   "Oks_lang_Response": {
-    "dialog": "Yumi : Mabuti naman Senpai :)",
-    "character": "opensmile.png"
+    "dialog": "Yumi : Mabuti naman Senpai 😊",
+    "character": "opensmile.png",
+    "nextScene": "pasok"
+  },
+  "Di_okay_Response": {
+    "dialog": "Yumi : Hala. Bakit Senpai? 😟",
+    "character": "sad.png"
+  },
+  "pasok": {
+    "dialog": "Yumi : Pasok ka Senpai",
+    "nextScene": "loob"
+  },
+  "loob": {
+    "dialog": "Yumi : Sarap sa loob Senpai...\nMas  mahangin dito kesa labas.",
+    "bg": "pupin.jpg"
   }
 }
