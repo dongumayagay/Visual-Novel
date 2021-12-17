@@ -1,9 +1,8 @@
 <script>
-  import { bg, dialog, character } from "../statestore";
+  import { bg, dialog, character, currentScene } from "../statestore";
   import { fade } from "svelte/transition";
   import scenes from "./scenes.json";
 
-  let currentScene = scenes["firstScene"];
   let choices = [];
   function changeScene(scene) {
     if (!scene) return;
@@ -12,13 +11,13 @@
     if (scene.dialog) $dialog = scene.dialog;
     if (scene.choices) choices = scene.choices;
   }
-  $: changeScene(currentScene);
+  $: changeScene($currentScene);
 </script>
 
 <div
   on:click|self={() => {
-    if ("nextScene" in currentScene)
-      currentScene = scenes[currentScene["nextScene"]];
+    if ("nextScene" in $currentScene)
+      $currentScene = scenes[$currentScene["nextScene"]];
   }}
   class="absolute inset-0 w-full h-full "
 >
@@ -30,7 +29,7 @@
       {#each choices as choice}
         <button
           on:click={() => {
-            currentScene = scenes[choice.nextScene];
+            $currentScene = scenes[choice.nextScene];
             choices = [];
           }}
           class=" bg-gradient-to-r from-transparent via-black/50 to-transparent text-white w-1/2 py-1 tracking-tight font-light leading-5"
