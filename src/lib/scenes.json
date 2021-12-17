@@ -1,0 +1,23 @@
+{
+  "firstScene": {
+    "bg": "pupout.jpg",
+    "character": "opensmile.png",
+    "dialog": "Yumi : Konnichiwa, Labao-senpai!! Watashi wa Yumi desu ~",
+    "nextScene": "secondScene"
+  },
+  "secondScene": {
+    "character": "smile.png",
+    "dialog": "Yumi : Kamusta Senpai?",
+    "nextScene": "thirdScene"
+  },
+  "thirdScene": {
+    "choices": [
+      { "text": "Oks lang 😊", "nextScene": "Oks_lang_Response" },
+      { "text": "Di okay ☹", "nextScene": "Di_okay_Response" }
+    ]
+  },
+  "Oks_lang_Response": {
+    "dialog": "Yumi : Mabuti naman Senpai :)",
+    "character": "opensmile.png"
+  }
+}

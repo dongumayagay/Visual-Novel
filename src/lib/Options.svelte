@@ -1,57 +1,40 @@
 <script>
   import { bg, dialog, character } from "../statestore";
   import { fade } from "svelte/transition";
-  import { each } from "svelte/internal";
-  let nextScene = "firstscene";
-  //   let nextScene = "thirdscene";
-  let options = [];
-  let scenes = {
-    firstscene: () => {
-      $dialog = "Yumi : Ohayo, Labao-senpai!! Watashi wa Yumi desu ~";
-      $character = "opensmile.png";
-      nextScene = "secondscene";
-    },
-    secondscene: () => {
-      $dialog = "tae tae tae";
-      $character = "smile.png";
-      nextScene = "thirdscene";
-    },
-    thirdscene: () => {
-      options = [
-        {
-          text: "Hello",
-          optscene: () => {
-            nextScene = "hiresponse";
-            options = [];
-          },
-        },
-      ];
-    },
-    hiresponse: () => {
-      $dialog = "Hi Sir...";
-    },
-  };
-  function changeScene() {
-    scenes[nextScene]();
+  import scenes from "./scenes.json";
+
+  let currentScene = scenes["firstScene"];
+  let choices = [];
+  function changeScene(scene) {
+    if (!scene) return;
+    if (scene.bg) $bg = scene.bg;
+    if (scene.character) $character = scene.character;
+    if (scene.dialog) $dialog = scene.dialog;
+    if (scene.choices) choices = scene.choices;
   }
+  $: changeScene(currentScene);
 </script>
 
-<div on:click|self={changeScene} class="absolute inset-0 w-full h-full ">
-  <!--  -->
-  {#if options.length > 0}
+<div
+  on:click|self={() => {
+    if ("nextScene" in currentScene)
+      currentScene = scenes[currentScene["nextScene"]];
+  }}
+  class="absolute inset-0 w-full h-full "
+>
+  {#if choices.length > 0}
     <div
       transition:fade
-      on:click|self={changeScene}
-      class="absolute inset-0 w-full h-full bg-black/30 flex flex-col items-center justify-center"
+      class="absolute inset-0 w-full h-full bg-black/30 flex flex-col items-center justify-center space-y-2"
     >
-      <!--  -->
-      {#each options as option}
+      {#each choices as choice}
         <button
           on:click={() => {
-            option.optscene();
-            changeScene();
+            currentScene = scenes[choice.nextScene];
+            choices = [];
           }}
-          class="bg-white text-black">{option.text}</button
+          class=" bg-gradient-to-r from-transparent via-black/50 to-transparent text-white w-1/2 py-1"
+          >{choice.text}</button
         >
       {/each}
     </div>
