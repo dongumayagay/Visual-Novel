@@ -6,36 +6,27 @@ using [Svelte](https://svelte.dev/) a Web Frontend Framework and [Tailwind CSS](
 
 Every Scene in Visual notel act as a Node in a Graph Data Structure it contains all possible path that exists.
 
-## Prerequisite
 
-Node.js
+## Requirements
+- Node.js
 
-to run a dev server
+## Developing
 
-```
+start a development server:
+
+```bash
 npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-to expose local development web server to you local network
-add --host to arguments
+## Building
 
-to automatically open a new tab for your development server
-add --open to arguments
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
-example:
-
-```
-npm run dev -- --host --open
-```
-
-to compile your project for distribution. the compiled files will be in 'dist' folder
-
-```
+```bash
 npm run build
 ```
 
-to preview the compiled project
-
-```
-npm run preview
-```
+> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
