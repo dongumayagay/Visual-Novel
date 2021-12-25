@@ -2,7 +2,7 @@
 
 using [Svelte](https://svelte.dev/) a Web Frontend Framework and [Tailwind CSS](https://tailwindcss.com/) for Styling using Directed Graph Data Structure to model relationship between Scene.
 
-## [Click here to view the live project](https://awesome-curran-9e9f1b.netlify.app/)
+## [Click here to view the live project](https://visual-novel-theta.vercel.app/)
 
 Every Scene in Visual notel act as a Node in a Graph Data Structure it contains all possible path that exists.
 
