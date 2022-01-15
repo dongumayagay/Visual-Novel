@@ -1,8 +1,8 @@
 # Simple Visual Novel Engine
 
-using [Svelte](https://svelte.dev/) a Web Frontend Framework and [Tailwind CSS](https://tailwindcss.com/) for Styling using Directed Graph Data Structure to model relationship between Scene.
+using [Svelte](https://svelte.dev/) a Web Frontend Framework and [Tailwind CSS](https://tailwindcss.com/) for Styling using `Directed Graph Data Structure` to model relationship between Scene.
 
-## [Click here to view the live project](https://visual-novel-don.vercel.app/)
+### [Click here to view the live project](https://vn-don.vercel.app/) or [here](https://vn-don.web.app/)
 
 Every Scene in Visual notel act as a Node in a Graph Data Structure it contains all possible path that exists.
 
@@ -10,10 +10,11 @@ Node.js (Latest Version)
 
 ## Setup
 
-download or clone the repo.
-then install dependencies
+1. download or clone the repo.
 
-```
+2. then install dependencies
+
+```bash
 # for npm
 npm install
 
