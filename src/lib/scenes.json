@@ -13,7 +13,7 @@
   "thirdScene": {
     "choices": [
       { "text": "Oks lang 😊", "nextScene": "Oks_lang_Response" },
-      { "text": "Di okay ☹", "nextScene": "Di_okay_Response" }
+      { "text": "Di okay 😢", "nextScene": "Di_okay_Response" }
     ]
   },
   "Oks_lang_Response": {
@@ -23,7 +23,8 @@
   },
   "Di_okay_Response": {
     "dialog": "Yumi : Hala. Bakit Senpai? 😟",
-    "character": "sad.png"
+    "character": "sad.png",
+    "nextScene": "dejokelang"
   },
   "pasok": {
     "dialog": "Yumi : Pasok ka Senpai",
@@ -31,6 +32,28 @@
   },
   "loob": {
     "dialog": "Yumi : Sarap sa loob Senpai...\n\nMas  mahangin dito kesa labas.",
-    "bg": "pupin.jpg"
+    "bg": "pupin.jpg",
+    "nextScene": "magandaBa"
+  },
+  "magandaBa": {
+    "dialog": "Yumi : Ano tingin mo Senpai maganda ba?",
+    "nextScene": "magandabasagot"
+  },
+  "magandabasagot": {
+    "choices": [
+      { "text": "Oo, Maganda 😊", "nextScene": "maganda" },
+      { "text": "Panget! 😠", "nextScene": "dimaganda" }
+    ]
+  },
+  "maganda": {
+    "dialog": "Yumi : Salamat Senpaii! Pinag-hirapan ko talaga to. Uno na yan! 😘",
+    "character": "smug.png"
+  },
+  "dimaganda": {
+    "dialog": "Yumi : Ginawa ko naman ang lahat senpai di parin sapat 😭",
+    "character": "sad.png"
+  },
+  "dejokelang": {
+    "choices": [{ "text": "De joke lang 😂", "nextScene": "Oks_lang_Response" }]
   }
 }
