@@ -2,3 +2,6 @@
 /dist/
 /.vscode/
 .DS_Store
+.firebaserc
+firebase.json
+.firebase
