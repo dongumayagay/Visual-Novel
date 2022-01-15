@@ -4,6 +4,9 @@ using [Svelte](https://svelte.dev/) a Web Frontend Framework and [Tailwind CSS](
 
 ### [Click here to view the live project](https://vn-don.vercel.app/) or [here](https://vn-don.web.app/)
 
+### [Github Repo](https://github.com/dongumayagay/Visual-Novel)
+
+()
 Every Scene in Visual notel act as a Node in a Graph Data Structure it contains all possible path that exists.
 
 Node.js (Latest Version)
