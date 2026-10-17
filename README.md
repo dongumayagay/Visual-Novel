@@ -1,49 +1,42 @@
 # Simple Visual Novel Engine
 
-using [Svelte](https://svelte.dev/) a Web Frontend Framework and [Tailwind CSS](https://tailwindcss.com/) for Styling using `Directed Graph Data Structure` to model relationship between Scene.
+A lightweight browser-based visual novel experiment built with **Svelte 3**, **Vite**, and Tailwind CSS. Scenes are modeled as nodes in a directed graph, with transitions representing the player's choices.
 
-### [Click here to view the live project](https://vn-don.vercel.app/) or [here](https://vn-don.web.app/)
+## Original demo links
 
-### [Github Repo](https://github.com/dongumayagay/Visual-Novel)
+- [Vercel deployment](https://vn-don.vercel.app/)
+- [Firebase Hosting deployment](https://vn-don.web.app/)
 
-Every Scene in Visual notel act as a Node in a Graph Data Structure it contains all possible path that exists.
+These URLs came from the original project. Their current availability has **not** been reverified.
 
-Node.js (Latest Version)
+## How it works
 
-## Setup
+- `src/App.svelte` — application entry UI.
+- `src/lib` — visual-novel components and content.
+- `src/statestore.js` — state management.
+- The scene graph defines possible narrative paths and player choices.
 
-1. download or clone the repo.
+This is a **Vite + Svelte SPA**, not a SvelteKit application. It does **not** require a SvelteKit adapter to build.
 
-2. then install dependencies
+## Run locally
 
 ```bash
-# for npm
 npm install
-
-# for yarn
-yarn
-
-# for pnpm
-pnpm install
-```
-
-## Developing
-
-start a development server:
-
-```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+Build and preview:
 
 ```bash
 npm run build
+npm run preview
 ```
 
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+## Maintenance status
+
+- Uses an older Svelte 3 / Vite 2 toolchain.
+- [Dependabot](.github/dependabot.yml) is configured for weekly npm version updates.
+- No GitHub Actions have been introduced.
+- A full migration to modern Svelte 5/Bun and replacement hosting on Cloudflare is **not yet completed**.
+
+Do not switch the production host until the scene navigation, assets, and user interaction have passed browser testing on the new build.
